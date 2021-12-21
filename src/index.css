@@ -74,11 +74,21 @@ main {
 
 h2 {
   padding: 10px;
-  background-color: aquamarine;
+  background-color: antiquewhite;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .active {
-  background: antiquewhite !important;
+  background: aquamarine !important;
+}
+
+.show-more {
+  padding: 2px;
+    background: antiquewhite !important;
+    border-radius: 6px;
+}
+
+button:hover{
+background-color: aquamarine !important;
 }

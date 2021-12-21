@@ -80,6 +80,16 @@ function App() {
     }
   }
 
+  const moveAll = (value) => {
+    if(value) {
+      setUnlikedTours([...unlikedTours, ...tours]);
+      setTours([]);
+    } else {
+      setTours([...tours, ...unlikedTours]);
+      setUnlikedTours([]);
+    }
+  }
+
   useEffect(() =>{
     fetchTours();
   },[]);
@@ -97,7 +107,7 @@ function App() {
  
   return (
     <main>   
-      {loading ? <Loading / > : <Tours tours={tours} unlikedTours={unlikedTours} addTours={addTours}removeTour={removeTour}/>}
+      {loading ? <Loading / > : <Tours tours={tours} unlikedTours={unlikedTours} addTours={addTours} moveAll={moveAll} removeTour={removeTour}/>}
     </main>
   );
 }
